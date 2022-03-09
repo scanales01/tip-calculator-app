@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root {
+    --font-family-Space-Mono: 'Space Mono', monospace;
+    --input-font-size: 24px;
+    --light-gray-cyan: hsl(185, 41%, 84%);
+    --white: hsl(0, 0%, 100%);
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-gray-cyan: hsl(186, 14%, 43%);
+    --gray-cyan: hsl(184, 14%, 56%);
+    --very-light-gray-cyan: hsl(189, 41%, 97%);
+}
+
+/* CSS Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-Space-Mono);   
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+body {
+    background-color: var(--light-gray-cyan);
+}
+
+#card-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 35%;
+    width: 75%;
+    max-height: 864px;
+    max-width: 1080px;
+    border-radius: 1.25rem;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tip {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.container {
+    margin: 2rem;
+}
+
+input {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: var(--very-light-gray-cyan);
+    border: 2.5px solid var(--very-light-gray-cyan);
+    border-radius: 0.25rem;
+    text-align: right;
+    font-size: 24px;
+    color: var(--very-dark-cyan);
+}
+
+input:focus {
+    border-color: var(--strong-cyan);
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+button {
+    font-size: 24px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 0.5rem;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: var(--light-gray-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#total-container {
+    background-color: var(--very-dark-cyan);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    position: relative;
+}
+
+#total-container h1 {
+    color: var(--very-light-gray-cyan);
+}
+
+#total-container p {
+    color: var(--dark-gray-cyan);
+}
+
+#total-container button {
+    margin-top: 12rem;
+    width: 100%;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+#total-container button:hover {
+    background-color: var(--light-gray-cyan);
+}
+
+#calculator-container {
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+#calculator-container h1{
+    color: var(--dark-gray-cyan);
+}
