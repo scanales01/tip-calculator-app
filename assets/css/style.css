@@ -92,7 +92,7 @@ button:hover {
 #total-container {
     background-color: var(--very-dark-cyan);
     border-radius: 1.25rem;
-    padding: 2rem;
+    padding: 2.25rem;
     position: relative;
 }
 
@@ -105,7 +105,7 @@ button:hover {
 }
 
 #total-container button {
-    margin-top: 12rem;
+    margin-top: 7rem;
     width: 100%;
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
@@ -113,6 +113,25 @@ button:hover {
 
 #total-container button:hover {
     background-color: var(--light-gray-cyan);
+}
+
+.tip-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.25rem;
+}
+
+.output {
+    color: var(--strong-cyan);
+    font-size: 48px;
 }
 
 #calculator-container {
