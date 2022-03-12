@@ -23,24 +23,24 @@
     <div id="calculator-container" class="container">
       <section class="bill">
         <h1>Bill</h1>
-        <input type="text" id="bill"  name="bill" required>
+        <input type="text" id="bill"  name="bill" value="0.00" required>
       </section>
 
       <section class="tip">
         <h1>Select Tip %</h1>
         <div class="button-grid">
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>25%</button>
-          <button>50%</button>
+          <button onclick="calculate(0.05)">5%</button>
+          <button onclick="calculate(0.1)">10%</button>
+          <button onclick="calculate(0.15)">15%</button>
+          <button onclick="calculate(0.25)">25%</button>
+          <button onclick="calculate(0.50)">50%</button>
           <button>Custom</button>
         </div>
       </section>
 
       <section class="people">
         <h1>Number of People</h1>
-        <input type="text" id="people" name="people" required>
+        <input type="number" id="people" name="people"  value="0" min="1" step="1" required>
       </section>
 
     </div>
@@ -51,7 +51,7 @@
           <h1>Tip Amount</h1>
           <p>/ person</p>
         </div>
-        <div class="output" id="tip">1.09</div>
+        <div class="output" id="tip">0.00</div>
       </section>
 
       <section class="total">
@@ -59,10 +59,10 @@
           <h1>Total</h1>
           <p>/ person</p>
         </div>
-        <div class="output" id="total">1.09</div>
+        <div class="output" id="total">0.00</div>
       </section>
     
-      <button>Reset</button>
+      <button onclick="reset()">Reset</button>
     </div>
   </div>
  

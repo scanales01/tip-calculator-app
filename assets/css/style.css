@@ -28,6 +28,7 @@ body {
     background-color: var(--light-gray-cyan);
 }
 
+/* change calculator container */
 #card-container {
     position: fixed;
     top: 50%;
@@ -52,6 +53,7 @@ body {
     margin: 2rem;
 }
 
+/* change input box look */
 input {
     margin-top: 0.5rem;
     width: 100%;
@@ -67,6 +69,18 @@ input:focus {
     border-color: var(--strong-cyan);
 }
 
+/* remove spinners/arrows from number inputs */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* change tip buttons */
 .button-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -89,6 +103,7 @@ button:hover {
     color: var(--very-dark-cyan);
 }
 
+/* change total card */
 #total-container {
     background-color: var(--very-dark-cyan);
     border-radius: 1.25rem;
