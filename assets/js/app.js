@@ -4,10 +4,10 @@ let tip = undefined;
 
 // reset calculator
 function reset() {
-    document.getElementById("bill").outerHTML = '<input type="text" id="bill"  name="bill" value=0.00 required>'
+    document.getElementById("bill").outerHTML = '<input type="number" id="bill"  name="bill" value="0.00" step="0.01" oninput=update() required>'
     document.getElementById("custom").outerHTML = '<button id="custom" onclick="setInputField()">';
     document.getElementById("custom").innerHTML = 'Custom';
-    document.getElementById("people").outerHTML = '<input type="number" id="people" name="people"  value="0" min="1" step="1" required>'
+    document.getElementById("people").outerHTML = '<input type="number" id="people" name="people"  value="0" min="1" step="1" oninput=update() required>'
     document.getElementById("tip").innerText = '0.00'
     document.getElementById("total").innerText = '0.00'
 }
@@ -60,8 +60,13 @@ function setTip(newTip) {
     update();
 }
 
+function setCustomTip() {
+    tip = document.getElementById("custom").value / 100;
+    update();
+}
+
 function setInputField() {
-    document.getElementById("custom").outerHTML = '<input type="text" id="custom" name="custom" value="0" min="0">';
+    document.getElementById("custom").outerHTML = '<input type="number" id="custom" name="custom" value="0" min="0" oninput="setCustomTip()">';
     document.getElementById("custom").focus();
 }
 

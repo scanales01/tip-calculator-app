@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
-  <script type="text/javascript" src="./assets/js/app.js"></script>
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <div id="card-container">
-    <div id="calculator-container" class="container">
-      <section class="bill">
-        <h1>Bill</h1>
-        <input type="text" id="bill"  name="bill" value="0.00" step="0.01" oninput=update() required>
-      </section>
-
-      <section class="tip">
-        <h1>Select Tip %</h1>
-        <div class="button-grid">
-          <button onclick="setTip(0.05)">5%</button>
-          <button onclick="setTip(0.1)">10%</button>
-          <button onclick="setTip(0.15)">15%</button>
-          <button onclick="setTip(0.25)">25%</button>
-          <button onclick="setTip(0.50)">50%</button>
-          <button id="custom" onclick="setInputField()">Custom</button>
-        </div>
-      </section>
-
-      <section class="people">
-        <h1>Number of People</h1>
-        <input type="number" id="people" name="people"  value="0" min="1" step="1" oninput=update() required>
-      </section>
-
-    </div>
-
-    <div id="total-container" class="container">
-      <section class="tip-total">
-        <div class="label">
-          <h1>Tip Amount</h1>
-          <p>/ person</p>
-        </div>
-        <div class="output" id="tip">0.00</div>
-      </section>
-
-      <section class="total">
-        <div class="label">
-          <h1>Total</h1>
-          <p>/ person</p>
-        </div>
-        <div class="output" id="total">0.00</div>
-      </section>
+    <script type="text/javascript" src="./assets/js/app.js"></script>
     
-      <button onclick="reset()">Reset</button>
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
+
+    <div id="card-container">
+      <div id="calculator-container" class="container">
+        <section class="bill">
+          <h1>Bill</h1>
+          <input type="number" id="bill"  name="bill" value="0.00" step="0.01" oninput=update() required>
+        </section>
+
+        <section class="tip">
+          <h1>Select Tip %</h1>
+          <div class="button-grid">
+            <button onclick="setTip(0.05)">5%</button>
+            <button onclick="setTip(0.1)">10%</button>
+            <button onclick="setTip(0.15)">15%</button>
+            <button onclick="setTip(0.25)">25%</button>
+            <button onclick="setTip(0.50)">50%</button>
+            <button id="custom" onclick="setInputField()">Custom</button>
+          </div>
+        </section>
+
+        <section class="people">
+          <h1>Number of People</h1>
+          <input type="number" id="people" name="people"  value="0" min="1" step="1" oninput=update() required>
+        </section>
+
+      </div>
+
+      <div id="total-container" class="container">
+        <section class="tip-total">
+          <div class="label">
+            <h1>Tip Amount</h1>
+            <p>/ person</p>
+          </div>
+          <div class="output" id="tip">0.00</div>
+        </section>
+
+        <section class="total">
+          <div class="label">
+            <h1>Total</h1>
+            <p>/ person</p>
+          </div>
+          <div class="output" id="total">0.00</div>
+        </section>
+      
+        <button onclick="reset()">Reset</button>
+      </div>
     </div>
-  </div>
- 
   
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-</body>
+    
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
