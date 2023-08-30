@@ -35,7 +35,7 @@ function calculate() {
         tip = 0;
     }
     let tipAmount = (bill * tip)/people;
-    let total = (bill + tip)/people;
+    let total = (bill + tipAmount)/people;
 
     document.getElementById("tip").innerText = formatNumbers(tipAmount);
     document.getElementById("total").innerText = formatNumbers(total);
